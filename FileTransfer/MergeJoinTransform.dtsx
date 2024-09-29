@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="MergeJoinTransform"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{25E6E724-637D-4A98-BBC5-C5342C3CB107}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{F6F41DFE-5C3E-4979-9A00-CA4D283DA3DB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -103,7 +103,7 @@
       DTS:DTSID="{BE15EF67-BF1A-4637-A495-0E66CA758373}"
       DTS:ObjectName="SSIS DB">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::DBServer]</DTS:PropertyExpression>
+        DTS:Name="ServerName">@[$Project::DBServer]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -143,28 +143,6 @@
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Truncate the Destination Table"
-      DTS:DTSID="{CAB2D77F-DE00-4BF1-BC5F-BDEBBB6DD6C6}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{09864B3A-C977-45B2-B25B-003C5701FA4A}"
-          SQLTask:SqlStatementSource="Delete from [dbo].[MergeTransformationData]&#xA;&#xA;SELECT @@ROWCOUNT"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="0"
-            SQLTask:DtsVariableName="User::DeletedCnt" />
-        </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Load Run Details into SSIS DB"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -1497,13 +1475,35 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate the Destination Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate the Destination Table"
+      DTS:DTSID="{CAB2D77F-DE00-4BF1-BC5F-BDEBBB6DD6C6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate the Destination Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{09864B3A-C977-45B2-B25B-003C5701FA4A}"
+          SQLTask:SqlStatementSource="Delete from [dbo].[MergeTransformationData]&#xA;&#xA;SELECT @@ROWCOUNT"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::DeletedCnt" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{1E612842-EDE5-4BC8-B9E8-31E88C5CD9EE}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:From="Package\Truncate the Destination Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Merge the Flat File and Leetcode data" />
@@ -1529,9 +1529,9 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\Execute SQL Task"
-          TopLeft="256.249988544733,41.7368416470009" />
+          Size="256,42.6666666666667"
+          Id="Package\Truncate the Destination Table"
+          TopLeft="214.999990388752,41.7368416470009" />
         <NodeLayout
           Size="226.666666666667,42.6666666666667"
           Id="Package\Load Run Details into SSIS DB"
@@ -1542,18 +1542,18 @@
           TopLeft="208.124990696087,124.526314422199" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="339.18748962041,84.4035083136675">
+          TopLeft="340.562490542419,84.4035083136676">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.1228061085317"
+              EndConnector="0,40.1228061085314"
               Start="0,0"
-              End="0,32.6228061085317">
+              End="0,32.6228061085314">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.6228061085317" />
+                    End="0,32.6228061085314" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
