@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-CGQNCNR"
   DTS:CreatorName="DESKTOP-CGQNCNR\Admin"
-  DTS:DTSID="{04AC14DB-31C3-4C42-BDFC-A032E522548A}"
+  DTS:DTSID="{CBB6FE16-80BE-4980-9C3F-15E003C70772}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="16393"
   DTS:ObjectName="MergeJoinTransform"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{F6F41DFE-5C3E-4979-9A00-CA4D283DA3DB}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{8A614270-B25C-470A-8756-1AF57316FFD9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{E12F9723-8F31-442D-B089-84412ECFC25C}"
+      DTS:DTSID="{FF4FEAFA-E05A-45FE-97B0-25678F17626B}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[$Project::FlatFileConnection]</DTS:PropertyExpression>
@@ -31,8 +31,7 @@
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Users\\Admin\\source\\repos\\Source Directory\\TestData_1.CSV">
+          DTS:CodePage="1252">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -41,7 +40,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{86FE79A4-F789-43EC-8D64-516291E38AE8}"
+              DTS:DTSID="{6F7B71D4-9BFF-4555-9082-A1B16019F9F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +49,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="first_name"
-              DTS:DTSID="{173A42D5-3368-4BF5-9D3B-DAF589C50CE4}"
+              DTS:DTSID="{B704DCD3-6B65-424D-B37D-61D90CCD8EA0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +58,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="last_name"
-              DTS:DTSID="{27108054-0DA7-434F-9E48-79C82296EE60}"
+              DTS:DTSID="{CF1287DF-1F67-4740-8F7E-F031B27E4F7F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +67,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Gender"
-              DTS:DTSID="{5B919C02-FF6C-4CD0-9CEF-8BB30866BD66}"
+              DTS:DTSID="{E31F5AC4-F903-47A3-A6A3-4770AFA1FDB0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +76,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Company_Name"
-              DTS:DTSID="{58461925-CBE9-4505-B66C-B4B035E85FFF}"
+              DTS:DTSID="{83079AC9-6A58-411E-A1ED-0A3805269E95}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -86,7 +85,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LeetCode]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{09864B3A-C977-45B2-B25B-003C5701FA4A}"
+      DTS:DTSID="{2331AF5B-0B58-4640-8984-F841BCA8C5BE}"
       DTS:ObjectName="LeetCode">
       <DTS:PropertyExpression
         DTS:Name="ServerName">@[$Project::DBServer]</DTS:PropertyExpression>
@@ -94,13 +93,13 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=LeetCode;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FileTransfer-{09864B3A-C977-45B2-B25B-003C5701FA4A}localhost\SQLEXPRESS01.LeetCode;" />
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=LeetCode;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FileTransfer-{2331AF5B-0B58-4640-8984-F841BCA8C5BE}localhost\SQLEXPRESS01.LeetCode;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SSIS DB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{BE15EF67-BF1A-4637-A495-0E66CA758373}"
+      DTS:DTSID="{CFC87471-48EA-47B9-8366-68C7099E7619}"
       DTS:ObjectName="SSIS DB">
       <DTS:PropertyExpression
         DTS:Name="ServerName">@[$Project::DBServer]</DTS:PropertyExpression>
@@ -108,14 +107,14 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=SSIS;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-UnionAllTransform-{BE15EF67-BF1A-4637-A495-0E66CA758373}localhost\SQLEXPRESS01.SSIS;" />
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=SSIS;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-UnionAllTransform-{CFC87471-48EA-47B9-8366-68C7099E7619}localhost\SQLEXPRESS01.SSIS;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{2D33B33E-1103-4DB4-AE0B-C7A55F1AC402}"
+      DTS:DTSID="{F0C2F602-392C-4E30-93C3-630B6B02EE5C}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="DeletedCnt">
@@ -124,7 +123,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4A209BA7-D88B-482F-B74D-C40D6F6057D9}"
+      DTS:DTSID="{F6B3BE3A-8F8B-463E-9A41-B8651D07ACFC}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="InsertCnt">
@@ -133,7 +132,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9137E047-2A10-40E5-8CE4-AF8C2DECB99D}"
+      DTS:DTSID="{CCEC7DE3-3823-41E9-9009-B2CABBF7A816}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="LoadData">
@@ -147,7 +146,7 @@
       DTS:refId="Package\Load Run Details into SSIS DB"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{088FE4FD-37A6-490A-93FE-B2E75D163875}"
+      DTS:DTSID="{BE04D57F-3FE6-4A29-BF58-2A3BBCD84C1C}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load Run Details into SSIS DB"
@@ -156,7 +155,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{BE15EF67-BF1A-4637-A495-0E66CA758373}"
+          SQLTask:Connection="{CFC87471-48EA-47B9-8366-68C7099E7619}"
           SQLTask:SqlStatementSource="INSERT INTO LogTable&#xA;values(?,?,?,getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -183,7 +182,7 @@
       DTS:refId="Package\Merge the Flat File and Leetcode data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{75F91233-871A-44FD-A617-A83365F9F022}"
+      DTS:DTSID="{D4699069-A784-4F1F-A8A9-8A40A5F839E0}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Merge the Flat File and Leetcode data"
@@ -1479,7 +1478,7 @@
       DTS:refId="Package\Truncate the Destination Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Truncate the Destination Table"
-      DTS:DTSID="{CAB2D77F-DE00-4BF1-BC5F-BDEBBB6DD6C6}"
+      DTS:DTSID="{26DBF6E1-2E59-4BF9-8538-AE961F666048}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate the Destination Table"
@@ -1488,7 +1487,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{09864B3A-C977-45B2-B25B-003C5701FA4A}"
+          SQLTask:Connection="{2331AF5B-0B58-4640-8984-F841BCA8C5BE}"
           SQLTask:SqlStatementSource="Delete from [dbo].[MergeTransformationData]&#xA;&#xA;SELECT @@ROWCOUNT"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -1502,7 +1501,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{1E612842-EDE5-4BC8-B9E8-31E88C5CD9EE}"
+      DTS:DTSID="{934A6AFA-84A8-4452-9746-52E353E50015}"
       DTS:From="Package\Truncate the Destination Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1510,7 +1509,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{D7C7599B-8B39-4FC4-ADF2-6156F06CDE7D}"
+      DTS:DTSID="{026D83AA-9C36-4F9F-B525-CF6E83F80962}"
       DTS:From="Package\Merge the Flat File and Leetcode data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -1529,10 +1528,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="256,42.6666666666667"
-          Id="Package\Truncate the Destination Table"
-          TopLeft="214.999990388752,41.7368416470009" />
-        <NodeLayout
           Size="226.666666666667,42.6666666666667"
           Id="Package\Load Run Details into SSIS DB"
           TopLeft="222.499990053475,223.736839648677" />
@@ -1540,6 +1535,10 @@
           Size="260,42.6666666666667"
           Id="Package\Merge the Flat File and Leetcode data"
           TopLeft="208.124990696087,124.526314422199" />
+        <NodeLayout
+          Size="256,42.6666666666667"
+          Id="Package\Truncate the Destination Table"
+          TopLeft="214.999990388752,41.7368416470009" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="340.562490542419,84.4035083136676">

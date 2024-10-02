@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-CGQNCNR"
   DTS:CreatorName="DESKTOP-CGQNCNR\Admin"
-  DTS:DTSID="{2CFC6A36-3725-4346-AAF9-C1D67490C5B4}"
+  DTS:DTSID="{6283E577-8BE9-4BE1-86ED-3BA108E76A89}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="16393"
-  DTS:ObjectName="MergeTransform"
+  DTS:ObjectName="UnionAllTransform"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{242960A3-C6F0-4185-887B-2D4FA96C99DA}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{A8CC577F-40F7-4FF2-8A9F-D335AD502F89}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{93116435-785A-4A2D-B529-87DADA980C1E}"
+      DTS:DTSID="{1E3F2A11-8603-4AD4-A244-3EF53CB0B005}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[$Project::FlatFileConnection]</DTS:PropertyExpression>
@@ -41,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{127DB872-F36F-4AD8-B3B6-7A223FDD5CDB}"
+              DTS:DTSID="{A845C482-BBC0-4161-A60B-29656B359A03}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="first_name"
-              DTS:DTSID="{5BE3F4C7-01D4-49C7-8FBE-713EA2E85DE6}"
+              DTS:DTSID="{D105F30A-14DC-4C7A-9794-3FD572721BA9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="last_name"
-              DTS:DTSID="{51BD4200-0587-4223-8E4F-E575B2F5C265}"
+              DTS:DTSID="{B8A6D8B9-F3CB-444D-B0FF-52F48C11D020}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Gender"
-              DTS:DTSID="{FF75D85D-B119-496E-B077-51C39ECC97EB}"
+              DTS:DTSID="{64AD71A2-5577-425A-A5A8-D5FBA7F4A474}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Company_Name"
-              DTS:DTSID="{8FEF15CA-B856-4CE2-AA7D-4EED140D9823}"
+              DTS:DTSID="{D8AFC5DA-B57E-43A6-AEB6-09C518FB32CA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -86,7 +86,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LeetCode]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{932226E7-281C-4016-86F8-28581C8438BC}"
+      DTS:DTSID="{BC265B96-FBC4-4FFE-ACED-1B51816E8127}"
       DTS:ObjectName="LeetCode">
       <DTS:PropertyExpression
         DTS:Name="ServerName">@[$Project::DBServer]</DTS:PropertyExpression>
@@ -94,13 +94,13 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=LeetCode;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FileTransfer-{932226E7-281C-4016-86F8-28581C8438BC}localhost\SQLEXPRESS01.LeetCode;" />
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=LeetCode;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FileTransfer-{BC265B96-FBC4-4FFE-ACED-1B51816E8127}localhost\SQLEXPRESS01.LeetCode;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SSIS DB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{2FBEDEDD-8221-4F0B-8D67-14A4ED574327}"
+      DTS:DTSID="{1815F5C3-23F0-41F7-92FA-3D97D0B4D193}"
       DTS:ObjectName="SSIS DB">
       <DTS:PropertyExpression
         DTS:Name="ServerName">@[$Project::DBServer]</DTS:PropertyExpression>
@@ -108,14 +108,14 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=SSIS;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-UnionAllTransform-{2FBEDEDD-8221-4F0B-8D67-14A4ED574327}localhost\SQLEXPRESS01.SSIS;" />
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=SSIS;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-UnionAllTransform-{1815F5C3-23F0-41F7-92FA-3D97D0B4D193}localhost\SQLEXPRESS01.SSIS;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{BFCE6EB3-A65E-42B3-A328-7341DFEF0E39}"
+      DTS:DTSID="{EDB6616E-BA65-4A66-AA79-5988D655AEC0}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="DeletedCnt">
@@ -124,7 +124,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{33E5CD83-6B5E-462E-A2DA-A86FD8B0F8E7}"
+      DTS:DTSID="{6626B602-6531-41DE-A8DD-8BE0857D27B0}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="InsertCnt">
@@ -133,7 +133,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0711AE92-10EC-47D0-B223-AC287D2CC0A2}"
+      DTS:DTSID="{327579D7-24F0-43A5-8F1F-0BF81721A685}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="LoadData">
@@ -147,7 +147,7 @@
       DTS:refId="Package\Load Run Details into SSIS DB"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{22D9A0AC-7F62-4048-ADE7-EEF43C11B6E8}"
+      DTS:DTSID="{22A96FF0-108E-4C8C-A050-F0ED4F9752A2}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load Run Details into SSIS DB"
@@ -156,7 +156,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{2FBEDEDD-8221-4F0B-8D67-14A4ED574327}"
+          SQLTask:Connection="{1815F5C3-23F0-41F7-92FA-3D97D0B4D193}"
           SQLTask:SqlStatementSource="INSERT INTO LogTable&#xA;values(?,?,?,getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -183,7 +183,7 @@
       DTS:refId="Package\Merge the Flat File and Leetcode data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{324F9ED2-3B13-4372-8D57-C5D484AB420E}"
+      DTS:DTSID="{D525B3A5-AA0B-41D2-B835-5AFA9790D1B6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Merge the Flat File and Leetcode data"
@@ -399,181 +399,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Merge the Flat File and Leetcode data\Merge Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Left Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[first_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="first_name"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[first_name]" />
-                    <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[last_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="last_name"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[last_name]" />
-                    <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[Gender]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Gender"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[Gender]" />
-                    <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[Company_Name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Company_Name"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[Company_Name]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Right Input].Columns[id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[id]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output]"
-                  isSorted="true"
-                  name="Merge Join Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[id]"
-                      name="id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[first_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[first_name]"
-                      name="first_name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[first_name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[last_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[last_name]"
-                      name="last_name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[last_name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[Gender]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[Gender]"
-                      name="Gender">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[Gender]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[Company_Name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[Company_Name]"
-                      name="Company_Name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input].Columns[Company_Name]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Merge the Flat File and Leetcode data\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -651,9 +476,8 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="id"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[id]" />
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[id]" />
                     <inputColumn
                       refId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[first_name]"
                       cachedCodepage="1252"
@@ -661,7 +485,7 @@
                       cachedLength="50"
                       cachedName="first_name"
                       externalMetadataColumnId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[first_name]" />
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[first_name]" />
                     <inputColumn
                       refId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[last_name]"
                       cachedCodepage="1252"
@@ -669,7 +493,7 @@
                       cachedLength="50"
                       cachedName="last_name"
                       externalMetadataColumnId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[last_name]" />
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[last_name]" />
                     <inputColumn
                       refId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
                       cachedCodepage="1252"
@@ -677,7 +501,7 @@
                       cachedLength="50"
                       cachedName="Gender"
                       externalMetadataColumnId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[Gender]" />
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Gender]" />
                     <inputColumn
                       refId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Company_Name]"
                       cachedCodepage="1252"
@@ -685,7 +509,7 @@
                       cachedLength="50"
                       cachedName="Company_Name"
                       externalMetadataColumnId="Package\Merge the Flat File and Leetcode data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company_Name]"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output].Columns[Company_Name]" />
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Company_Name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -985,30 +809,19 @@
               </outputs>
             </component>
             <component
-              refId="Package\Merge the Flat File and Leetcode data\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
+              refId="Package\Merge the Flat File and Leetcode data\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
               version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
               <inputs>
                 <input
-                  refId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
+                  refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input].Columns[id]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1].Columns[id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1016,17 +829,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[id]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[id]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input].Columns[first_name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1].Columns[first_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1034,17 +844,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[first_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input].Columns[last_name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1].Columns[last_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1052,17 +859,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[last_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input].Columns[Gender]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1070,17 +874,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input].Columns[Company_Name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1].Columns[Company_Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1088,131 +889,22 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[Company_Name]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Company_Name]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[id]"
-                      name="id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[first_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[first_name]"
-                      name="first_name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[last_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[last_name]"
-                      name="last_name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[Gender]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[Gender]"
-                      name="Gender">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[Company_Name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output].Columns[Company_Name]"
-                      name="Company_Name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output].Columns[Company_Name]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Merge the Flat File and Leetcode data\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
                 <input
-                  refId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
+                  refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input].Columns[id]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2].Columns[id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1220,17 +912,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[id]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input].Columns[first_name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2].Columns[first_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1238,17 +927,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[first_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input].Columns[last_name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2].Columns[last_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1256,17 +942,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[last_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input].Columns[Gender]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1274,17 +957,14 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input].Columns[Company_Name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2].Columns[Company_Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -1292,101 +972,63 @@
                       lineageId="Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Company_Name]">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Company_Name]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
+                <input
+                  refId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
+                  refId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[id]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[id]"
-                      name="id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
                     <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[first_name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[first_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[first_name]"
-                      name="first_name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[first_name]"
+                      name="first_name" />
                     <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[last_name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[last_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[last_name]"
-                      name="last_name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[last_name]"
+                      name="last_name" />
                     <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[Gender]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[Gender]"
-                      name="Gender">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                      name="Gender" />
                     <outputColumn
-                      refId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[Company_Name]"
+                      refId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Company_Name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output].Columns[Company_Name]"
-                      name="Company_Name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output].Columns[Company_Name]}</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1].Columns[Company_Name]"
+                      name="Company_Name" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1396,17 +1038,12 @@
           <paths>
             <path
               refId="Package\Merge the Flat File and Leetcode data.Paths[Flat File Source Output]"
-              endId="Package\Merge the Flat File and Leetcode data\Sort.Inputs[Sort Input]"
+              endId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 1]"
               name="Flat File Source Output"
               startId="Package\Merge the Flat File and Leetcode data\Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Merge the Flat File and Leetcode data.Paths[Merge Join Output]"
-              endId="Package\Merge the Flat File and Leetcode data\Row Count.Inputs[Row Count Input 1]"
-              name="Merge Join Output"
-              startId="Package\Merge the Flat File and Leetcode data\Merge Join.Outputs[Merge Join Output]" />
-            <path
               refId="Package\Merge the Flat File and Leetcode data.Paths[OLE DB Source Output]"
-              endId="Package\Merge the Flat File and Leetcode data\Sort 1.Inputs[Sort Input]"
+              endId="Package\Merge the Flat File and Leetcode data\Union All.Inputs[Union All Input 2]"
               name="OLE DB Source Output"
               startId="Package\Merge the Flat File and Leetcode data\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
@@ -1415,15 +1052,10 @@
               name="Row Count Output 1"
               startId="Package\Merge the Flat File and Leetcode data\Row Count.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\Merge the Flat File and Leetcode data.Paths[Sort Output]"
-              endId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Merge the Flat File and Leetcode data\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\Merge the Flat File and Leetcode data.Paths[Sort Output1]"
-              endId="Package\Merge the Flat File and Leetcode data\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Merge the Flat File and Leetcode data\Sort 1.Outputs[Sort Output]" />
+              refId="Package\Merge the Flat File and Leetcode data.Paths[Union All Output 1]"
+              endId="Package\Merge the Flat File and Leetcode data\Row Count.Inputs[Row Count Input 1]"
+              name="Union All Output 1"
+              startId="Package\Merge the Flat File and Leetcode data\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1432,7 +1064,7 @@
       DTS:refId="Package\Truncate the Destination Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Truncate the Destination Table"
-      DTS:DTSID="{85FC6210-91B5-4308-A673-0D2A62CDC6F0}"
+      DTS:DTSID="{82C3F933-3235-4EFA-8E5D-D7CA726F55B0}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate the Destination Table"
@@ -1441,7 +1073,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{932226E7-281C-4016-86F8-28581C8438BC}"
+          SQLTask:Connection="{BC265B96-FBC4-4FFE-ACED-1B51816E8127}"
           SQLTask:SqlStatementSource="Delete from [dbo].[MergeTransformationData]&#xA;&#xA;SELECT @@ROWCOUNT"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -1455,7 +1087,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{8E5903AB-1573-4461-BB5C-B3411F4E1781}"
+      DTS:DTSID="{D22F1A95-74B7-402B-8AB8-E427E7EFF5C7}"
       DTS:From="Package\Truncate the Destination Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1463,7 +1095,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{8075A4FB-A533-498A-90FD-816F8E614562}"
+      DTS:DTSID="{A1B07889-FCB8-47FD-94AD-554792897FD3}"
       DTS:From="Package\Merge the Flat File and Leetcode data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -1482,9 +1114,9 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="247.333333333334,42.6666666666667"
+          Size="261.333333333334,42.6666666666667"
           Id="Package\Truncate the Destination Table"
-          TopLeft="214.999990388752,41.7368416470009" />
+          TopLeft="211.24999055639,41.7368416470009" />
         <NodeLayout
           Size="226.666666666667,42.6666666666667"
           Id="Package\Load Run Details into SSIS DB"
@@ -1495,7 +1127,7 @@
           TopLeft="208.124990696087,124.526314422199" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="338.395823875753,84.4035083136676">
+          TopLeft="340.020823959572,84.4035083136676">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1548,33 +1180,71 @@
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\Merge the Flat File and Leetcode data\OLE DB Destination"
-          TopLeft="273.124987790361,330.999996431564" />
+          TopLeft="280.624987455085,285.842102190547" />
         <NodeLayout
           Size="190.666666666667,42.6666666666667"
           Id="Package\Merge the Flat File and Leetcode data\OLE DB Source"
-          TopLeft="391.749985415489,46.3421054735078" />
+          TopLeft="396.749985191972,36.7631582102617" />
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\Merge the Flat File and Leetcode data\Union All"
+          TopLeft="300.624986561016,131.754384642713" />
         <NodeLayout
           Size="132,42.6666666666667"
           Id="Package\Merge the Flat File and Leetcode data\Row Count"
-          TopLeft="289.37498706393,255.210523513628" />
+          TopLeft="304.374986393378,203.210524084578" />
         <NodeLayout
           Size="166,42.6666666666667"
           Id="Package\Merge the Flat File and Leetcode data\Flat File Source"
-          TopLeft="142.499993629755,43.1052626846075" />
+          TopLeft="162.499992735685,33.5263154213614" />
+        <EdgeLayout
+          Id="Package\Merge the Flat File and Leetcode data.Paths[Union All Output 1]"
+          TopLeft="361.958319894349,174.42105130938">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.41666649902874,28.7894727751984"
+              Start="0,0"
+              End="8.41666649902874,21.2894727751984">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.3947363875992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.3947363875992"
+                    Point2="0,14.3947363875992"
+                    Point3="4,14.3947363875992" />
+                  <mssgle:LineSegment
+                    End="4.41666649902874,14.3947363875992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.41666649902874,14.3947363875992"
+                    Point2="8.41666649902874,14.3947363875992"
+                    Point3="8.41666649902874,18.3947363875992" />
+                  <mssgle:LineSegment
+                    End="8.41666649902874,21.2894727751984" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Merge the Flat File and Leetcode data.Paths[Row Count Output 1]"
-          TopLeft="357.916654093812,297.877190180295">
+          TopLeft="369.166653590898,245.877190751245">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.1228062512694"
+              EndConnector="0,39.9649114393019"
               Start="0,0"
-              End="0,25.6228062512694">
+              End="0,32.4649114393019">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6228062512694" />
+                    End="0,32.4649114393019" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1583,112 +1253,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Merge the Flat File and Leetcode data\Sort"
-          TopLeft="252.499988712371,110.561402697422" />
-        <EdgeLayout
-          Id="Package\Merge the Flat File and Leetcode data.Paths[Flat File Source Output]"
-          TopLeft="225.499993629755,85.7719293512742">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76.3333284159494,24.7894733461482"
-              Start="0,0"
-              End="76.3333284159494,17.2894733461482">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.3947366730741" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.3947366730741"
-                    Point2="0,12.3947366730741"
-                    Point3="4,12.3947366730741" />
-                  <mssgle:LineSegment
-                    End="72.3333284159494,12.3947366730741" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.3333284159494,12.3947366730741"
-                    Point2="76.3333284159494,12.3947366730741"
-                    Point3="76.3333284159494,16.3947366730741" />
-                  <mssgle:LineSegment
-                    End="76.3333284159494,17.2894733461482" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Merge the Flat File and Leetcode data\Sort 1"
-          TopLeft="368.124983543531,112.701753514515" />
         <EdgeLayout
           Id="Package\Merge the Flat File and Leetcode data.Paths[OLE DB Source Output]"
-          TopLeft="487.083318748823,89.0087721401745">
+          TopLeft="492.083318525305,79.4298248769283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.958335205292,23.6929813743409"
+              EndConnector="-111.013887519845,52.3245597657846"
               Start="0,0"
-              End="-64.958335205292,16.1929813743409">
+              End="-111.013887519845,44.8245597657846">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.84649068717044" />
+                    End="0,26.9905117926106" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,7.84649068717044"
-                    Point2="0,11.8464906871704"
-                    Point3="-4,11.8464906871704" />
+                    Point1="0,26.9905117926106"
+                    Point2="0,30.9905117926106"
+                    Point3="-4,30.9905117926106" />
                   <mssgle:LineSegment
-                    End="-60.958335205292,11.8464906871704" />
+                    End="-107.013887519845,30.9905117926106" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60.958335205292,11.8464906871704"
-                    Point2="-64.958335205292,11.8464906871704"
-                    Point3="-64.958335205292,15.8464906871704" />
+                    Point1="-107.013887519845,30.9905117926106"
+                    Point2="-111.013887519845,30.9905117926106"
+                    Point3="-111.013887519845,34.9905117926106" />
                   <mssgle:LineSegment
-                    End="-64.958335205292,16.1929813743409" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="132,42.6666666666667"
-          Id="Package\Merge the Flat File and Leetcode data\Merge Join"
-          TopLeft="294.999986812473,185.473682723052" />
-        <EdgeLayout
-          Id="Package\Merge the Flat File and Leetcode data.Paths[Sort Output]"
-          TopLeft="301.833322045704,153.228069364089">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="59.1666647667688,32.245613358963"
-              Start="0,0"
-              End="59.1666647667688,24.745613358963">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.1228066794815" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.1228066794815"
-                    Point2="0,16.1228066794815"
-                    Point3="4,16.1228066794815" />
-                  <mssgle:LineSegment
-                    End="55.1666647667688,16.1228066794815" />
-                  <mssgle:CubicBezierSegment
-                    Point1="55.1666647667688,16.1228066794815"
-                    Point2="59.1666647667688,16.1228066794815"
-                    Point3="59.1666647667688,20.1228066794815" />
-                  <mssgle:LineSegment
-                    End="59.1666647667688,24.745613358963" />
+                    End="-111.013887519845,44.8245597657846" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1698,53 +1288,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Merge the Flat File and Leetcode data.Paths[Sort Output1]"
-          TopLeft="422.124983543531,154.701753514515">
+          Id="Package\Merge the Flat File and Leetcode data.Paths[Flat File Source Output]"
+          TopLeft="245.499992735685,76.1929820880281">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-40.4583300643911,30.7719292085367"
+              EndConnector="97.3472160475533,55.5614025546849"
               Start="0,0"
-              End="-40.4583300643911,23.2719292085367">
+              End="97.3472160475533,48.0614025546849">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.2420418661385" />
+                    End="0,28.9076118135043" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.2420418661385"
-                    Point2="0,18.2420418661385"
-                    Point3="-4,18.2420418661385" />
+                    Point1="0,28.9076118135043"
+                    Point2="0,32.9076118135043"
+                    Point3="4,32.9076118135043" />
                   <mssgle:LineSegment
-                    End="-36.4583300643911,18.2420418661385" />
+                    End="93.3472160475533,32.9076118135043" />
                   <mssgle:CubicBezierSegment
-                    Point1="-36.4583300643911,18.2420418661385"
-                    Point2="-40.4583300643911,18.2420418661385"
-                    Point3="-40.4583300643911,22.2420418661385" />
+                    Point1="93.3472160475533,32.9076118135043"
+                    Point2="97.3472160475533,32.9076118135043"
+                    Point3="97.3472160475533,36.9076118135043" />
                   <mssgle:LineSegment
-                    End="-40.4583300643911,23.2719292085367" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Merge the Flat File and Leetcode data.Paths[Merge Join Output]"
-          TopLeft="358.187486938202,228.140349389719">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.0701741239096"
-              Start="0,0"
-              End="0,19.5701741239096">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5701741239096" />
+                    End="97.3472160475533,48.0614025546849" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

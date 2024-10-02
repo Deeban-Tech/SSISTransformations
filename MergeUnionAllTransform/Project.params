@@ -4,7 +4,7 @@
     SSIS:Name="FlatFileConnection">
     <SSIS:Properties>
       <SSIS:Property
-        SSIS:Name="ID">{3ccd1920-3900-4416-84c2-2e94756698fe}</SSIS:Property>
+        SSIS:Name="ID">{c685009f-5f65-4bdf-94f1-732f380d4c06}</SSIS:Property>
       <SSIS:Property
         SSIS:Name="CreationName"></SSIS:Property>
       <SSIS:Property
@@ -12,11 +12,11 @@
       <SSIS:Property
         SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Required">1</SSIS:Property>
+        SSIS:Name="Required">0</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\\Users\\Admin\\source\\repos\\Source Directory\\TestData_1.CSV</SSIS:Property>
+        SSIS:Name="Value">C:\Users\Admin\source\repos\Source Directory\MergeUnionAll\TestData.CSV</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -25,7 +25,7 @@
     SSIS:Name="DBServer">
     <SSIS:Properties>
       <SSIS:Property
-        SSIS:Name="ID">{4836f02d-ca33-42d7-bda9-c60f19acfa23}</SSIS:Property>
+        SSIS:Name="ID">{4a866855-4a66-4874-b1e8-466fb155369b}</SSIS:Property>
       <SSIS:Property
         SSIS:Name="CreationName"></SSIS:Property>
       <SSIS:Property
@@ -33,7 +33,7 @@
       <SSIS:Property
         SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Required">1</SSIS:Property>
+        SSIS:Name="Required">0</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
